@@ -69,28 +69,28 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style5" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">gatunek</td>
+                <td class="auto-style5" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">Gatunek</td>
                 <td class="auto-style6" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">
                     <asp:DropDownList ID="DropDownList4" runat="server" AutoPostBack="True">
                     </asp:DropDownList>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style5" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">data wydania</td>
+                <td class="auto-style5" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">Data wydania</td>
                 <td class="auto-style6" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">
                     <asp:DropDownList ID="DropDownList5" runat="server" AutoPostBack="True">
                     </asp:DropDownList>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style5" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">wydawnictwo</td>
+                <td class="auto-style5" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">Wydawnictwo</td>
                 <td class="auto-style6" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">
                     <asp:DropDownList ID="DropDownList6" runat="server" AutoPostBack="True">
                     </asp:DropDownList>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style5" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">data rezerwacji</td>
+                <td class="auto-style5" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">Data rezerwacji</td>
                 <td class="auto-style6" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">
                     <asp:DropDownList ID="DropDownList7" runat="server" AutoPostBack="True">
                     </asp:DropDownList>
