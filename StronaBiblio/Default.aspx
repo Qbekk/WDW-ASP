@@ -39,11 +39,10 @@
     
         <table class="auto-style1">
             <tr>
-                <td class="auto-style3" style="font-family: Arial, Helvetica, sans-serif; background-color: #339933; border-style: groove; border-width: medium">&nbsp;</td>
+                <td class="auto-style3" style="font-family: Arial, Helvetica, sans-serif; background-color: #339933; border-style: groove; border-width: medium" rowspan="2">&nbsp;</td>
                 <td class="auto-style3" colspan="2" style="font-family: Arial, Helvetica, sans-serif; background-color: #339933; border-style: groove; border-width: medium">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style3" style="font-family: Arial, Helvetica, sans-serif; background-color: #339933; border-style: groove; border-width: medium">&nbsp;</td>
                 <td class="auto-style3" colspan="2" style="font-family: Arial, Helvetica, sans-serif; background-color: #339933; border-style: groove; border-width: medium; text-align: center;">Rezerwacja &quot;Domowa biblioteczka&quot;</td>
             </tr>
             <tr>
