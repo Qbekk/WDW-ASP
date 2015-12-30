@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
     <siteMapNode url="start.aspx" title="Strona domowa"  description="">
-        <siteMapNode url="" title="Rezerwacja"  description="" />
+        <siteMapNode url="Rezerwacja.aspx" title="Rezerwacja"  description="" />
          <siteMapNode url="Domowa.aspx" title="Rezerwuj książkę"/>
          <siteMapNode url="zmien.aspx" title="Zmień rezerwację"/>
         <!-- <siteMapNode url="Rezerwacja.aspx" title="Usuń rezerwację"/> -->
