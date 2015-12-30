@@ -26,13 +26,13 @@
         <tr>
             <td class="auto-style10"></td>
             <td class="auto-style8">
-                    <asp:Calendar ID="cWylot" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" Width="330px">
+                    <asp:Calendar ID="cWylot" runat="server" BackColor="#FF99CC" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="#996633" Height="250px" NextPrevFormat="ShortMonth" TitleFormat="Month" Width="330px">
                         <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
                         <DayStyle BackColor="#CCCCCC" />
                         <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="White" />
                         <OtherMonthDayStyle ForeColor="#999999" />
                         <SelectedDayStyle BackColor="#333399" ForeColor="White" />
-                        <TitleStyle BackColor="#333399" BorderStyle="Solid" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" />
+                        <TitleStyle BackColor="#339966" BorderStyle="Solid" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" />
                         <TodayDayStyle BackColor="#999999" ForeColor="White" />
                     </asp:Calendar>
                 </td>

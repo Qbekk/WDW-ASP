@@ -11,4 +11,12 @@ public partial class Domowa : System.Web.UI.Page
     {
 
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        /*Page.Response.Write("Dokonano rezerwacji dla: "
+            + ddlNazwisko.SelectedValue);*/
+        Response.Redirect("Rezerwacja.aspx?Nazwisko=" +
+            ddlNazwisko.SelectedValue);
+    }
 }

@@ -68,7 +68,9 @@
                 </td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style8">
+                <asp:Button ID="Button1" runat="server" BackColor="#FF6600" Font-Bold="True" Font-Italic="True" Font-Overline="False" Font-Size="Medium" Font-Strikeout="False" Font-Underline="True" ForeColor="White" OnClick="Button1_Click" Text="Do rezerwacji" />
+            </td>
             <td>&nbsp;</td>
         </tr>
         </table>
