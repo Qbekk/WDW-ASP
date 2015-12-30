@@ -10,6 +10,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <table class="auto-style1">
         <tr>
+            <td colspan="2" style="text-align: center">Witaj na stronie...</td>
+        </tr>
+        <tr>
+            <td class="auto-style8">&nbsp;</td>
+            <td>
+                    &nbsp;</td>
+        </tr>
+        <tr>
             <td class="auto-style8">Tytuł</td>
             <td>
                     <asp:DropDownList ID="ddlTytuł" runat="server" AutoPostBack="True" DataSourceID="SqlBazaBiblio" DataTextField="Tytul" DataValueField="Tytul">
@@ -59,14 +67,6 @@
             <td class="auto-style8">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
-        <tr>
-            <td class="auto-style8">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style8">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
+        </table>
 </asp:Content>
 
