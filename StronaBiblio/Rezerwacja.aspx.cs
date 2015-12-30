@@ -9,7 +9,7 @@ public partial class Rezerwacja : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        //Page.Response.Write.(Request.QueryString("Nazwisko"));
     }
 
     protected void Button1_Click(object sender, EventArgs e)
