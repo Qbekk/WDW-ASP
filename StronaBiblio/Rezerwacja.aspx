@@ -47,10 +47,10 @@
         <tr>
             <td class="auto-style9">Liczba egzemplarzy</td>
             <td>
-                    <asp:ListBox ID="ListBox1" runat="server" Height="55px" Width="57px">
-                        <asp:ListItem>1</asp:ListItem>
-                        <asp:ListItem>2</asp:ListItem>
-                        <asp:ListItem>3</asp:ListItem>
+                    <asp:ListBox ID="lbIlosc" runat="server" Height="55px" Width="130px">
+                        <asp:ListItem>1 egzemplarz</asp:ListItem>
+                        <asp:ListItem>2 egzemplarze</asp:ListItem>
+                        <asp:ListItem>3 egzemplarze</asp:ListItem>
                     </asp:ListBox>
                 </td>
         </tr>
@@ -60,10 +60,11 @@
                     <textarea id="taUwagi" runat="server" cols="20" name="S1" rows="1"></textarea></td>
         </tr>
         <tr>
-            <td class="auto-style9">&nbsp;</td>
-            <td>
+            <td class="auto-style9">
                 <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Rezerwuj" />
             </td>
+            <td id="tdBlad" runat="server">
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style9">&nbsp;</td>
