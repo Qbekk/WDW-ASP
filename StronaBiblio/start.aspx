@@ -31,7 +31,7 @@
         <tr>
             <td class="auto-style8">Tytuł</td>
             <td>
-                    <asp:DropDownList ID="ddlTytuł" runat="server" AutoPostBack="True" DataSourceID="Sqltytul" DataTextField="Tytul" DataValueField="ID">
+                    <asp:DropDownList ID="ddlTytul" runat="server" AutoPostBack="True" DataSourceID="Sqltytul" DataTextField="Tytul" DataValueField="ID">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="Sqltytul" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString1 %>" ProviderName="<%$ ConnectionStrings:ConnectionString1.ProviderName %>" SelectCommand="SELECT [Autor], [Gatunek], [Tytul], [ID] FROM [tytuly] WHERE (([Gatunek] = ?) AND ([Autor] = ?))">
                         <SelectParameters>
@@ -71,7 +71,7 @@
             <td class="auto-style8">
                 <asp:Button ID="Button1" runat="server" BackColor="#FF6600" Font-Bold="True" Font-Italic="True" Font-Overline="False" Font-Size="Medium" Font-Strikeout="False" Font-Underline="True" ForeColor="White" OnClick="Button1_Click" Text="Do rezerwacji" />
             </td>
-            <td>&nbsp;</td>
+            <td>S</td>
         </tr>
         </table>
 </asp:Content>

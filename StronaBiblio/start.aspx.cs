@@ -17,6 +17,10 @@ public partial class Domowa : System.Web.UI.Page
         /*Page.Response.Write("Dokonano rezerwacji dla: "
             + ddlNazwisko.SelectedValue);*/
         Response.Redirect("potwierdzenie.aspx?Tytuł=" +
-            ddlTytuł.SelectedValue);
+            ddlTytul.SelectedValue);
+        Session["tytul"]=ddlTytul.SelectedValue;
+
+
     }
-}
+    
+} 

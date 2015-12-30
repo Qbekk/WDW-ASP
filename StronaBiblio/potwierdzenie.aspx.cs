@@ -9,6 +9,7 @@ public partial class potwierdzenie : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        //int idtytul = (int) Session["tytul"];
+        //LblTytul.Text = Convert.ToString(idtytul);
     }
 }

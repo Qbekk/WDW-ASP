@@ -12,7 +12,15 @@
             width: 280px;
         }
         .auto-style6 {
-            width: 109%;
+            width: 100%;
+        }
+        .auto-style7 {
+            width: 172px;
+            height: 22px;
+        }
+        .auto-style8 {
+            width: 280px;
+            height: 22px;
         }
     </style>
 </asp:Content>
@@ -23,7 +31,9 @@
         </tr>
         <tr>
             <td class="auto-style4">Tytuł:</td>
-            <td class="auto-style5">&nbsp;</td>
+            <td class="auto-style5">
+                <asp:Label ID="LblTytul" runat="server" OnDataBinding="Page_Load"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td class="auto-style4">Autor:</td>
@@ -34,8 +44,8 @@
             <td class="auto-style5">&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style4">ID książki</td>
-            <td class="auto-style5">&nbsp;</td>
+            <td class="auto-style7">ID książki</td>
+            <td class="auto-style8"></td>
         </tr>
         <tr>
             <td class="auto-style4">Wydawnictwo:</td>
