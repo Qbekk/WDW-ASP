@@ -14,13 +14,19 @@ public partial class Domowa : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
+        Session["tytul"] = ddlTytul.SelectedValue;
+
+
+
         /*Page.Response.Write("Dokonano rezerwacji dla: "
             + ddlNazwisko.SelectedValue);*/
         Response.Redirect("potwierdzenie.aspx?Tytuł=" +
             ddlTytul.SelectedValue);
-        Session["tytul"]=ddlTytul.SelectedValue;
-
-
     }
-    
+
+
+    protected void ddlTytul_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        
+    }
 } 
