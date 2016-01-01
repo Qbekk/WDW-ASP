@@ -24,15 +24,17 @@ public partial class osobowe : System.Web.UI.Page
 
     protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
     {
-        if (txtImie.Text.Length < 4)
+        if (txtImie.Text.Length < 3)
         {
             args.IsValid = false;
         }
 
     }
 
-    protected void Button1_Click(object sender, EventArgs e)
+
+
+    protected void Button1_Click1(object sender, EventArgs e)
     {
-        
+        if (Page.IsValid) ;
     }
 }

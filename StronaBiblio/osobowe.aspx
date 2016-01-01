@@ -57,9 +57,11 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style4">&nbsp;</td>
+        <td class="auto-style4">
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Button" />
+        </td>
         <td>
-            <asp:ValidationSummary ID="ValidationSummary1" runat="server" BorderStyle="Groove" DisplayMode="List" Font-Names="Verdana" Font-Size="Small" ForeColor="#CC0000" />
+            <asp:ValidationSummary ID="ValidationSummary1" runat="server" BorderStyle="Groove" DisplayMode="List" Font-Names="Verdana" Font-Size="Small" ForeColor="#CC0000" ShowMessageBox="True" />
         </td>
     </tr>
     <tr>
