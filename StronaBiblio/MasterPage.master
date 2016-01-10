@@ -43,6 +43,15 @@
                         <PathSeparatorStyle Font-Bold="True" ForeColor="#1C5E55" />
                         <RootNodeStyle Font-Bold="True" ForeColor="Blue" />
                     </asp:SiteMapPath>
+                    <asp:LoginView ID="LoginView1" runat="server">
+                        <AnonymousTemplate>
+                            <asp:LoginStatus LoginText="Zaloguj się" ID="LoginStatus1" runat="server" />
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <asp:LoginName ID="LoginName1" runat="server" />
+                            <asp:LoginStatus LogoutText="Wyloguj się" ID="LoginStatus2" runat="server" />
+                        </LoggedInTemplate>
+                    </asp:LoginView>
                 </td>
             </tr>
             <tr>
