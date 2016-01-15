@@ -61,7 +61,7 @@
         </tr>
         <tr>
             <td class="auto-style9">
-                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Rezerwuj" />
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Rezerwuj" BackColor="#66CCFF" Font-Bold="True" />
             </td>
             <td id="tdBlad" runat="server">
                 &nbsp;</td>

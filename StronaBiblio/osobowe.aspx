@@ -24,6 +24,7 @@
         <td class="auto-style4">Nazwisko</td>
         <td>
             <asp:TextBox ID="txtNazwisko" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtNazwisko" Display="Dynamic" ErrorMessage="Brak podania nazwiska">!</asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
@@ -58,7 +59,7 @@
     </tr>
     <tr>
         <td class="auto-style4">
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Button" />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Przejdź dalej" BackColor="#66CCFF" Font-Bold="True" Font-Overline="False" Font-Size="Medium" Font-Strikeout="False" />
         </td>
         <td>
             <asp:ValidationSummary ID="ValidationSummary1" runat="server" BorderStyle="Groove" DisplayMode="List" Font-Names="Verdana" Font-Size="Small" ForeColor="#CC0000" ShowMessageBox="True" />
