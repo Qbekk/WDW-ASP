@@ -92,7 +92,9 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style4">
+                <asp:Button ID="Button1" runat="server" BackColor="#33CCFF" Text="do zaprogramowania" />
+            </td>
             <td class="auto-style5">&nbsp;</td>
         </tr>
     </table>

@@ -10,7 +10,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <table class="auto-style1">
         <tr>
-            <td colspan="2" style="text-align: center">Witaj na stronie...</td>
+            <td colspan="2" style="text-align: center">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style8">Gatunek</td>
