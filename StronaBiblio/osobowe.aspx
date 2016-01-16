@@ -66,7 +66,61 @@
         </td>
     </tr>
     <tr>
-        <td class="auto-style4">&nbsp;</td>
+        <td class="auto-style4">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnectionString1 %>" DeleteCommand="DELETE FROM [Rezerwacje] WHERE [ID] = ? AND (([Imie] = ?) OR ([Imie] IS NULL AND ? IS NULL)) AND (([Nazwisko] = ?) OR ([Nazwisko] IS NULL AND ? IS NULL)) AND (([data] = ?) OR ([data] IS NULL AND ? IS NULL)) AND (([Dlugosc] = ?) OR ([Dlugosc] IS NULL AND ? IS NULL)) AND (([IDksiazki] = ?) OR ([IDksiazki] IS NULL AND ? IS NULL)) AND (([telefon] = ?) OR ([telefon] IS NULL AND ? IS NULL)) AND (([email] = ?) OR ([email] IS NULL AND ? IS NULL))" InsertCommand="INSERT INTO [Rezerwacje] ([ID], [Imie], [Nazwisko], [data], [Dlugosc], [IDksiazki], [telefon], [email]) VALUES (?, ?, ?, ?, ?, ?, ?, ?)" OldValuesParameterFormatString="original_{0}" ProviderName="<%$ ConnectionStrings:ConnectionString1.ProviderName %>" SelectCommand="SELECT * FROM [Rezerwacje]" UpdateCommand="UPDATE [Rezerwacje] SET [Imie] = ?, [Nazwisko] = ?, [data] = ?, [Dlugosc] = ?, [IDksiazki] = ?, [telefon] = ?, [email] = ? WHERE [ID] = ? AND (([Imie] = ?) OR ([Imie] IS NULL AND ? IS NULL)) AND (([Nazwisko] = ?) OR ([Nazwisko] IS NULL AND ? IS NULL)) AND (([data] = ?) OR ([data] IS NULL AND ? IS NULL)) AND (([Dlugosc] = ?) OR ([Dlugosc] IS NULL AND ? IS NULL)) AND (([IDksiazki] = ?) OR ([IDksiazki] IS NULL AND ? IS NULL)) AND (([telefon] = ?) OR ([telefon] IS NULL AND ? IS NULL)) AND (([email] = ?) OR ([email] IS NULL AND ? IS NULL))">
+                <DeleteParameters>
+                    <asp:Parameter Name="original_ID" Type="Int32" />
+                    <asp:Parameter Name="original_Imie" Type="String" />
+                    <asp:Parameter Name="original_Imie" Type="String" />
+                    <asp:Parameter Name="original_Nazwisko" Type="String" />
+                    <asp:Parameter Name="original_Nazwisko" Type="String" />
+                    <asp:Parameter Name="original_data" Type="DateTime" />
+                    <asp:Parameter Name="original_data" Type="DateTime" />
+                    <asp:Parameter Name="original_Dlugosc" Type="Int32" />
+                    <asp:Parameter Name="original_Dlugosc" Type="Int32" />
+                    <asp:Parameter Name="original_IDksiazki" Type="Int32" />
+                    <asp:Parameter Name="original_IDksiazki" Type="Int32" />
+                    <asp:Parameter Name="original_telefon" Type="Int32" />
+                    <asp:Parameter Name="original_telefon" Type="Int32" />
+                    <asp:Parameter Name="original_email" Type="String" />
+                    <asp:Parameter Name="original_email" Type="String" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="ID" Type="Int32" />
+                    <asp:Parameter Name="Imie" Type="String" />
+                    <asp:Parameter Name="Nazwisko" Type="String" />
+                    <asp:Parameter Name="data" Type="DateTime" />
+                    <asp:Parameter Name="Dlugosc" Type="Int32" />
+                    <asp:Parameter Name="IDksiazki" Type="Int32" />
+                    <asp:Parameter Name="telefon" Type="Int32" />
+                    <asp:Parameter Name="email" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="Imie" Type="String" />
+                    <asp:Parameter Name="Nazwisko" Type="String" />
+                    <asp:Parameter Name="data" Type="DateTime" />
+                    <asp:Parameter Name="Dlugosc" Type="Int32" />
+                    <asp:Parameter Name="IDksiazki" Type="Int32" />
+                    <asp:Parameter Name="telefon" Type="Int32" />
+                    <asp:Parameter Name="email" Type="String" />
+                    <asp:Parameter Name="original_ID" Type="Int32" />
+                    <asp:Parameter Name="original_Imie" Type="String" />
+                    <asp:Parameter Name="original_Imie" Type="String" />
+                    <asp:Parameter Name="original_Nazwisko" Type="String" />
+                    <asp:Parameter Name="original_Nazwisko" Type="String" />
+                    <asp:Parameter Name="original_data" Type="DateTime" />
+                    <asp:Parameter Name="original_data" Type="DateTime" />
+                    <asp:Parameter Name="original_Dlugosc" Type="Int32" />
+                    <asp:Parameter Name="original_Dlugosc" Type="Int32" />
+                    <asp:Parameter Name="original_IDksiazki" Type="Int32" />
+                    <asp:Parameter Name="original_IDksiazki" Type="Int32" />
+                    <asp:Parameter Name="original_telefon" Type="Int32" />
+                    <asp:Parameter Name="original_telefon" Type="Int32" />
+                    <asp:Parameter Name="original_email" Type="String" />
+                    <asp:Parameter Name="original_email" Type="String" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
+        </td>
         <td>&nbsp;</td>
     </tr>
 </table>

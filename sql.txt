@@ -1,0 +1,2 @@
+rezerwacje
+SELECT Rezerwacje.ID, Rezerwacje.Imie, Rezerwacje.Nazwisko, Rezerwacje.data, Rezerwacje.Dlugosc, Rezerwacje.telefon, Rezerwacje.email, tytuly.Tytul, Autorzy.Imiona, Autorzy.Nazwiska FROM ((Rezerwacje INNER JOIN tytuly ON Rezerwacje.IDksiazki = tytuly.ID) INNER JOIN Autorzy ON tytuly.Autor = Autorzy.ID)

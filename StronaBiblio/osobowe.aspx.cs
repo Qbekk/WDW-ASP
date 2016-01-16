@@ -35,7 +35,15 @@ public partial class osobowe : System.Web.UI.Page
 
     protected void Button1_Click1(object sender, EventArgs e)
     {
-        if (Page.IsValid) ;
+        if (Page.IsValid)
+        {
+
+
+
+
+
+
+        }
     }
 
 }
