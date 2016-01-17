@@ -9,7 +9,10 @@ public partial class osobowe : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["tytul"]==null)
+        {
+            Response.Redirect("start.aspx");
+        }
     }
 
     protected void TextBox5_TextChanged(object sender, EventArgs e)
