@@ -38,6 +38,14 @@ public partial class osobowe : System.Web.UI.Page
         if (Page.IsValid)
         {
 
+            System.Data.DataView listarezerwacji
+             = (System.Data.DataView)DbRezerwacje.Select(DataSourceSelectArguments.Empty);
+
+            int idrezerw = listarezerwacji.Count;
+            Session["idrezer"] = ++idrezerw;
+            //txtImie.Text = idrezerw.ToString();
+
+            DbRezerwacje.Insert();
 
 
 
@@ -46,4 +54,10 @@ public partial class osobowe : System.Web.UI.Page
         }
     }
 
+
+    protected void DbRezerwacje_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+    {
+
+    }
 }
+   

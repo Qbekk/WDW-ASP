@@ -55,7 +55,9 @@
     </tr>
     <tr>
         <td class="auto-style4">&nbsp;</td>
-        <td>&nbsp;</td>
+        <td>
+            <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+        </td>
     </tr>
     <tr>
         <td class="auto-style4">
@@ -67,7 +69,7 @@
     </tr>
     <tr>
         <td class="auto-style4">
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnectionString1 %>" DeleteCommand="DELETE FROM [Rezerwacje] WHERE [ID] = ? AND (([Imie] = ?) OR ([Imie] IS NULL AND ? IS NULL)) AND (([Nazwisko] = ?) OR ([Nazwisko] IS NULL AND ? IS NULL)) AND (([data] = ?) OR ([data] IS NULL AND ? IS NULL)) AND (([Dlugosc] = ?) OR ([Dlugosc] IS NULL AND ? IS NULL)) AND (([IDksiazki] = ?) OR ([IDksiazki] IS NULL AND ? IS NULL)) AND (([telefon] = ?) OR ([telefon] IS NULL AND ? IS NULL)) AND (([email] = ?) OR ([email] IS NULL AND ? IS NULL))" InsertCommand="INSERT INTO [Rezerwacje] ([ID], [Imie], [Nazwisko], [data], [Dlugosc], [IDksiazki], [telefon], [email]) VALUES (?, ?, ?, ?, ?, ?, ?, ?)" OldValuesParameterFormatString="original_{0}" ProviderName="<%$ ConnectionStrings:ConnectionString1.ProviderName %>" SelectCommand="SELECT * FROM [Rezerwacje]" UpdateCommand="UPDATE [Rezerwacje] SET [Imie] = ?, [Nazwisko] = ?, [data] = ?, [Dlugosc] = ?, [IDksiazki] = ?, [telefon] = ?, [email] = ? WHERE [ID] = ? AND (([Imie] = ?) OR ([Imie] IS NULL AND ? IS NULL)) AND (([Nazwisko] = ?) OR ([Nazwisko] IS NULL AND ? IS NULL)) AND (([data] = ?) OR ([data] IS NULL AND ? IS NULL)) AND (([Dlugosc] = ?) OR ([Dlugosc] IS NULL AND ? IS NULL)) AND (([IDksiazki] = ?) OR ([IDksiazki] IS NULL AND ? IS NULL)) AND (([telefon] = ?) OR ([telefon] IS NULL AND ? IS NULL)) AND (([email] = ?) OR ([email] IS NULL AND ? IS NULL))">
+            <asp:SqlDataSource ID="DbRezerwacje" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnectionString1 %>" DeleteCommand="DELETE FROM [Rezerwacje] WHERE [ID] = ? AND (([Imie] = ?) OR ([Imie] IS NULL AND ? IS NULL)) AND (([Nazwisko] = ?) OR ([Nazwisko] IS NULL AND ? IS NULL)) AND (([data] = ?) OR ([data] IS NULL AND ? IS NULL)) AND (([Dlugosc] = ?) OR ([Dlugosc] IS NULL AND ? IS NULL)) AND (([IDksiazki] = ?) OR ([IDksiazki] IS NULL AND ? IS NULL)) AND (([telefon] = ?) OR ([telefon] IS NULL AND ? IS NULL)) AND (([email] = ?) OR ([email] IS NULL AND ? IS NULL))" InsertCommand="INSERT INTO [Rezerwacje] ([ID], [Imie], [Nazwisko], [data], [Dlugosc], [IDksiazki], [telefon], [email]) VALUES (?, ?, ?, ?, ?, ?, ?, ?)" OldValuesParameterFormatString="original_{0}" ProviderName="<%$ ConnectionStrings:ConnectionString1.ProviderName %>" SelectCommand="SELECT * FROM [Rezerwacje]" UpdateCommand="UPDATE [Rezerwacje] SET [Imie] = ?, [Nazwisko] = ?, [data] = ?, [Dlugosc] = ?, [IDksiazki] = ?, [telefon] = ?, [email] = ? WHERE [ID] = ? AND (([Imie] = ?) OR ([Imie] IS NULL AND ? IS NULL)) AND (([Nazwisko] = ?) OR ([Nazwisko] IS NULL AND ? IS NULL)) AND (([data] = ?) OR ([data] IS NULL AND ? IS NULL)) AND (([Dlugosc] = ?) OR ([Dlugosc] IS NULL AND ? IS NULL)) AND (([IDksiazki] = ?) OR ([IDksiazki] IS NULL AND ? IS NULL)) AND (([telefon] = ?) OR ([telefon] IS NULL AND ? IS NULL)) AND (([email] = ?) OR ([email] IS NULL AND ? IS NULL))" OnSelecting="DbRezerwacje_Selecting">
                 <DeleteParameters>
                     <asp:Parameter Name="original_ID" Type="Int32" />
                     <asp:Parameter Name="original_Imie" Type="String" />
@@ -86,14 +88,14 @@
                     <asp:Parameter Name="original_email" Type="String" />
                 </DeleteParameters>
                 <InsertParameters>
-                    <asp:Parameter Name="ID" Type="Int32" />
-                    <asp:Parameter Name="Imie" Type="String" />
-                    <asp:Parameter Name="Nazwisko" Type="String" />
-                    <asp:Parameter Name="data" Type="DateTime" />
-                    <asp:Parameter Name="Dlugosc" Type="Int32" />
-                    <asp:Parameter Name="IDksiazki" Type="Int32" />
-                    <asp:Parameter Name="telefon" Type="Int32" />
-                    <asp:Parameter Name="email" Type="String" />
+                    <asp:SessionParameter DefaultValue="" Name="ID" SessionField="idrezer" Type="Int32" />
+                    <asp:ControlParameter ControlID="txtImie" Name="Imie" PropertyName="Text" Type="String" />
+                    <asp:ControlParameter ControlID="txtNazwisko" Name="Nazwisko" PropertyName="Text" Type="String" />
+                    <asp:ControlParameter ControlID="Calendar1" DefaultValue="" Name="data" PropertyName="SelectedDate" Type="DateTime" />
+                    <asp:Parameter DefaultValue="35" Name="Dlugosc" Type="Int32" />
+                    <asp:SessionParameter DefaultValue="4" Name="IDksiazki" SessionField="tytul" Type="Int32" />
+                    <asp:ControlParameter ControlID="txtTelefon" Name="telefon" PropertyName="Text" Type="Int32" />
+                    <asp:ControlParameter ControlID="txtEmail" Name="email" PropertyName="Text" Type="String" />
                 </InsertParameters>
                 <UpdateParameters>
                     <asp:Parameter Name="Imie" Type="String" />
