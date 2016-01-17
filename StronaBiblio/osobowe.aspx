@@ -25,6 +25,7 @@
         <td>
             <asp:TextBox ID="txtNazwisko" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtNazwisko" Display="Dynamic" ErrorMessage="Brak podania nazwiska">!</asp:RequiredFieldValidator>
+            <asp:CustomValidator ID="CustomValidator2" runat="server" ControlToValidate="txtNazwisko" Display="Dynamic" ErrorMessage="Błędnie wprowadzone nazwisko" OnServerValidate="CustomValidator2_ServerValidate">!</asp:CustomValidator>
         </td>
     </tr>
     <tr>

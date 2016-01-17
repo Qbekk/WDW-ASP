@@ -62,5 +62,13 @@ public partial class osobowe : System.Web.UI.Page
     {
 
     }
+
+    protected void CustomValidator2_ServerValidate(object source, ServerValidateEventArgs args)
+    {
+        if (txtNazwisko.Text.Length < 2) // As
+        {
+            args.IsValid = false;
+        }
+    }
 }
    
