@@ -1,5 +1,5 @@
 # WDW-ASP
 ##Nasz projekt
 ###Strona Studenckiego Klubu Ksiażki
-####Lubi ksiażki
+####Lubie ksiażki
 #####:3
