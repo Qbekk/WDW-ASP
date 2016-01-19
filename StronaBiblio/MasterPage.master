@@ -28,15 +28,15 @@
     
         <table class="auto-style1">
             <tr>
-                <td class="auto-style2" style="font-family: Arial, Helvetica, sans-serif; background-color: #339933; border-style: groove; border-width: medium" rowspan="3">
+                <td class="auto-style2" style="font-family: Arial, Helvetica, sans-serif; background-color: #00CC66; border-style: groove; border-width: medium" rowspan="3">
                     <asp:Image ID="Image1" runat="server" Height="100px" ImageUrl="~/rysunki/ksi____ki (1).gif" Width="125px" />
                 </td>
             </tr>
             <tr>
-                <td class="auto-style3" style="font-family: Arial, Helvetica, sans-serif; background-color: #339933; border-style: groove; border-width: medium; text-align: center;"><strong style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: #333300">Rezerwacja &quot;Domowa biblioteczka&quot;</strong></td>
+                <td class="auto-style3" style="font-family: Arial, Helvetica, sans-serif; background-color: #00CC66; border-style: groove; border-width: medium; text-align: center;"><strong style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: #333300">Rezerwacja &quot;Domowa biblioteczka&quot;</strong></td>
             </tr>
             <tr>
-                <td class="auto-style3" style="font-family: Arial, Helvetica, sans-serif; background-color: #339933; border-style: groove; border-width: medium; text-align: center;">
+                <td class="auto-style3" style="font-family: Arial, Helvetica, sans-serif; background-color: #00CC66; border-style: groove; border-width: medium; text-align: center;">
                     <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="0.8em" PathSeparator=" : ">
                         <CurrentNodeStyle ForeColor="#CC0000" />
                         <NodeStyle Font-Bold="True" ForeColor="#003300" />
@@ -63,11 +63,8 @@
                         <DynamicSelectedStyle BackColor="#507CD1" />
                         <Items>
                             <asp:MenuItem NavigateUrl="~/default.aspx" Text="Strona główna" Value="Strona główna"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/potwierdzenie.aspx" Text="Potwierdzenie" Value="Rezerwacja">
-                                <asp:MenuItem NavigateUrl="~/Rezerwacja.aspx" Text="rezerwacja" Value="zarezerwuj"></asp:MenuItem>
-                                <asp:MenuItem Text="potwierdzenie rezerwacji" Value="zmień rezerwacje" NavigateUrl="~/potwierdzenie_rezerwacji.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/lista.aspx" Text="Baza książek" Value="New Item">
                             </asp:MenuItem>
-                            <asp:MenuItem Text="moje książki" Value="New Item" NavigateUrl="~/moje_książki.aspx"></asp:MenuItem>
                         </Items>
                         <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
                         <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
@@ -81,7 +78,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif" colspan="2">
+                <td style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif; font-size: small; font-style: italic; color: #CC66FF; text-align: center;" colspan="2">
                     Strona zaprojektowana przez: Jakuba Benerta i Adama Ostrowskiego z grupy 202.</td>
             </tr>
             </table>
