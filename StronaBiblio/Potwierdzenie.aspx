@@ -84,9 +84,9 @@
                         <asp:BoundField DataField="Data Wydania" HeaderText="Data Wydania" SortExpression="Data Wydania" />
                     </Fields>
                 </asp:DetailsView>
-                <asp:SqlDataSource ID="SqlKsiazka" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString1 %>" ProviderName="<%$ ConnectionStrings:ConnectionString1.ProviderName %>" SelectCommand="SELECT Autorzy.Nazwiska, Gatunki.Gatunke, tytuly.[Data Wydania], tytuly.Tytul FROM ((Autorzy INNER JOIN tytuly ON Autorzy.ID = tytuly.Autor) INNER JOIN Gatunki ON tytuly.Gatunek = Gatunki.ID) WHERE (tytuly.ID = ?)">
+                <asp:SqlDataSource ID="SqlKsiazka" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString1 %>" ProviderName="<%$ ConnectionStrings:ConnectionString1.ProviderName %>" SelectCommand="SELECT Gatunki.Gatunke, Autorzy.Nazwiska, tytuly.Tytul, tytuly.[Data Wydania] FROM ((Autorzy INNER JOIN Gatunki ON Autorzy.Gatunek = Gatunki.ID) INNER JOIN tytuly ON Autorzy.ID = tytuly.Autor)WHERE ([tytuly.ID] = ?)">
                     <SelectParameters>
-                        <asp:SessionParameter Name="ID" SessionField="tytul" Type="Int32" />
+                        <asp:SessionParameter Name="ID" SessionField="tytul" Type="Int32" DefaultValue="" />
                     </SelectParameters>
                 </asp:SqlDataSource>
             </td>
