@@ -80,6 +80,10 @@
         </asp:ContentPlaceHolder>
                 </td>
             </tr>
+            <tr>
+                <td style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif" colspan="2">
+                    Strona zaprojektowana przez: Jakuba Benerta i Adama Ostrowskiego z grupy 202.</td>
+            </tr>
             </table>
     
     </div>
