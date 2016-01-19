@@ -1,14 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
     <siteMapNode url="default.aspx" title="Strona domowa"  description="">
-        <siteMapNode url="Rezerwacja.aspx" title="Rezerwacja"  description="" />
-         <siteMapNode url="Domowa.aspx" title="Rezerwuj książkę"/>
-         <siteMapNode url="zmien.aspx" title="Zmień rezerwację"/>
-        <!-- <siteMapNode url="Rezerwacja.aspx" title="Usuń rezerwację"/> -->
-
-      <!--</siteMapNode> -->
-      <!-- <siteMapNode url="" title=""  description="" /> -->
-      <!-- powyżej powinno być: <siteMapNode url="Rezerwacja.apsx" title="o nas????????"/> -->
-
+        <siteMapNode url="Potwierdzenie.aspx" title="Potwierdzenie rezerwacji"  description="" >
+          <siteMapNode url="Osobowe.aspx" title="Dane Do Rezerwacji"/>
+        </siteMapNode>
+        <siteMapNode url="lista.aspx" title="Baza danych"/>
+        <siteMapNode url="ListaAdmin.aspx" title="baza danych(admin)"/>
+        <siteMapNode url="tajne.aspx" title="Psst!"/>
     </siteMapNode>
 </siteMap>

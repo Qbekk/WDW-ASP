@@ -18,7 +18,8 @@ public partial class Logowanie : System.Web.UI.Page
         string login = Login1.UserName;
         string haslo = Login1.Password;
 
-        if (login == "admin" && haslo == "admin"){
+        if ((login == "admin" && haslo == "admin") || (login == "student" && haslo == "student"))
+        {
 
             System.Web.Security.FormsAuthentication.RedirectFromLoginPage(login,
                 Login1.RememberMeSet);

@@ -45,13 +45,14 @@ public partial class osobowe : System.Web.UI.Page
              = (System.Data.DataView)DbRezerwacje.Select(DataSourceSelectArguments.Empty);
 
             int idrezerw = listarezerwacji.Count;
-            Session["idrezer"] = ++idrezerw;
+            idrezerw++;
+            Session["idrezer"] = idrezerw;
             //txtImie.Text = idrezerw.ToString();
 
             DbRezerwacje.Insert();
 
 
-
+            Response.Redirect("potwierdzenie_rezerwacji.aspx");
 
 
         }

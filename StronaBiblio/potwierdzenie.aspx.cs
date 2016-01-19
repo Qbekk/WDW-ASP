@@ -10,9 +10,19 @@ public partial class potwierdzenie : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         string idtytul=Session["tytul"].ToString();
-        LblTytulID.Text = idtytul;
         
         
+        
+    }
+    protected void BtnCofnij_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Default.aspx");
+    }
+
+    protected void BtnDalej_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("osobowe.aspx?Tytuł=" +
+            Session["tytul"]);
     }
 }
 

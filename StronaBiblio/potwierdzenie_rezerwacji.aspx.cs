@@ -11,4 +11,9 @@ public partial class potwierdzenie_rezerwacji : System.Web.UI.Page
     {
 
     }
+
+    protected void ButtWyjsc_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("lista.aspx");
+    }
 }
