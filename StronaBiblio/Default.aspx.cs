@@ -29,4 +29,9 @@ public partial class Domowa : System.Web.UI.Page
     {
         
     }
+
+    protected void SqlGatunek_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+    {
+
+    }
 } 

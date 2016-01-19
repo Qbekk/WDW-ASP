@@ -62,7 +62,7 @@
                         <DynamicMenuStyle BackColor="#B5C7DE" />
                         <DynamicSelectedStyle BackColor="#507CD1" />
                         <Items>
-                            <asp:MenuItem NavigateUrl="~/start.aspx" Text="Strona główna (start.aspx)" Value="Strona główna"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/default.aspx" Text="Strona główna" Value="Strona główna"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/potwierdzenie.aspx" Text="Potwierdzenie" Value="Rezerwacja">
                                 <asp:MenuItem NavigateUrl="~/Rezerwacja.aspx" Text="rezerwacja" Value="zarezerwuj"></asp:MenuItem>
                                 <asp:MenuItem Text="potwierdzenie rezerwacji" Value="zmień rezerwacje" NavigateUrl="~/potwierdzenie_rezerwacji.aspx"></asp:MenuItem>
