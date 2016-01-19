@@ -11,7 +11,7 @@ public partial class osobowe : System.Web.UI.Page
     {
         if (Session["tytul"]==null)
         {
-            Response.Redirect("start.aspx");
+            Response.Redirect("default.aspx");
         }
     }
 
@@ -70,6 +70,20 @@ public partial class osobowe : System.Web.UI.Page
         {
             args.IsValid = false;
         }
+    }
+
+    protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+    {
+
+    }
+
+
+
+
+
+    protected void ButtCofnij_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("default.aspx");
     }
 }
    

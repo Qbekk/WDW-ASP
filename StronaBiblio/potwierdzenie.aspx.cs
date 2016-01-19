@@ -9,10 +9,14 @@ public partial class potwierdzenie : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["tytul"] == null)
+        {
+            Response.Redirect("default.aspx");
+        }
         string idtytul=Session["tytul"].ToString();
-        
-        
-        
+       
+
+
     }
     protected void BtnCofnij_Click(object sender, EventArgs e)
     {

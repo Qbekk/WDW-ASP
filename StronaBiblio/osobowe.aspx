@@ -43,25 +43,15 @@
         </td>
     </tr>
     <tr>
-        <td class="auto-style4">Preferowana forma kontaktu</td>
+        <td class="auto-style4">
+            &nbsp;</td>
         <td>
-            <asp:RadioButtonList ID="rblKontakt" runat="server">
-            </asp:RadioButtonList>
-        </td>
-    </tr>
-    <tr>
-        <td class="auto-style4">Uwagi</td>
-        <td>
-            <textarea id="txtUwagi" cols="20" name="S1" rows="2"></textarea></td>
-    </tr>
-    <tr>
-        <td class="auto-style4">&nbsp;</td>
-        <td>
-            <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+            <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar>
         </td>
     </tr>
     <tr>
         <td class="auto-style4">
+            <asp:Button ID="ButtCofnij" runat="server" OnClick="ButtCofnij_Click" Text="Anuluj" />
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Przejdź dalej" BackColor="#66CCFF" Font-Bold="True" Font-Overline="False" Font-Size="Medium" Font-Strikeout="False" />
         </td>
         <td>
