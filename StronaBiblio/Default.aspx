@@ -1,135 +1,64 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Domowa" MaintainScrollPositionOnPostback="true" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
-
-        .auto-style1 {
-            width: 100%;
+        .auto-style8 {
+            width: 249px;
         }
-        .auto-style2 {
-            height: 23px;
-        }
-        .auto-style5 {
-            width: 123px;
-            height: 26px;
-        }
-        .auto-style6 {
-            height: 26px;
-        }
-        .auto-style7 {
-            width: 123px;
-            height: 23px;
-        }
-        .auto-style4 {
-            width: 123px;
-        }
-        #taUwagi {
-            height: 106px;
-            width: 275px;
+        .auto-style9 {
+            height: 13px;
         }
     </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div style="height: 25px">
-    
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style3" style="font-family: Arial, Helvetica, sans-serif; background-color: #339933; border-style: groove; border-width: medium">&nbsp;</td>
-                <td class="auto-style3" colspan="2" style="font-family: Arial, Helvetica, sans-serif; background-color: #339933; border-style: groove; border-width: medium">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3" style="font-family: Arial, Helvetica, sans-serif; background-color: #339933; border-style: groove; border-width: medium">&nbsp;</td>
-                <td class="auto-style3" colspan="2" style="font-family: Arial, Helvetica, sans-serif; background-color: #339933; border-style: groove; border-width: medium; text-align: center;">Rezerwacja &quot;Domowa biblioteczka&quot;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3" rowspan="8" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">&nbsp;</td>
-                <td class="auto-style3" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">Tytuł</td>
-                <td class="auto-style2" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">
-                    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <table class="auto-style1">
+        <tr>
+            <td colspan="2" style="text-align: center" class="auto-style9"></td>
+        </tr>
+        <tr>
+            <td class="auto-style8">Gatunek</td>
+            <td>
+                    <asp:DropDownList ID="ddlGatunek" runat="server" AutoPostBack="True" DataSourceID="SqlGatunek" DataTextField="Gatunke" DataValueField="ID">
                     </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlGatunek" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString1 %>" ProviderName="<%$ ConnectionStrings:ConnectionString1.ProviderName %>" SelectCommand="SELECT [ID], [Gatunke] FROM [Gatunki]" OnSelecting="SqlGatunek_Selecting"></asp:SqlDataSource>
                 </td>
-            </tr>
-            <tr>
-                <td class="auto-style5" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">Imię autora</td>
-                <td class="auto-style6" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">
-                    <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True">
+        </tr>
+        <tr>
+            <td class="auto-style8">Nazwisko</td>
+            <td>
+                    <asp:DropDownList ID="ddlNazwisko" runat="server" AutoPostBack="True" DataSourceID="SqlNazwisko" DataTextField="Nazwiska" DataValueField="ID">
                     </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlNazwisko" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString1 %>" ProviderName="<%$ ConnectionStrings:ConnectionString1.ProviderName %>" SelectCommand="SELECT [ID], [Nazwiska] FROM [Autorzy] WHERE ([Gatunek] = ?)">
+                        <SelectParameters>
+                            <asp:ControlParameter ControlID="ddlGatunek" DefaultValue="2" Name="Gatunek" PropertyName="SelectedValue" Type="Int32" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
                 </td>
-            </tr>
-            <tr>
-                <td class="auto-style5" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">Nazwisko</td>
-                <td class="auto-style6" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">
-                    <asp:DropDownList ID="DropDownList3" runat="server" AutoPostBack="True">
+        </tr>
+        <tr>
+            <td class="auto-style8">Tytuł</td>
+            <td>
+                    <asp:DropDownList ID="ddlTytul" runat="server" AutoPostBack="True" DataSourceID="Sqltytul" DataTextField="Tytul" DataValueField="ID" OnSelectedIndexChanged="ddlTytul_SelectedIndexChanged">
                     </asp:DropDownList>
+                    <asp:SqlDataSource ID="Sqltytul" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString1 %>" ProviderName="<%$ ConnectionStrings:ConnectionString1.ProviderName %>" SelectCommand="SELECT [Autor], [Tytul], [ID] FROM [tytuly] WHERE ([Autor] = ?)">
+                        <SelectParameters>
+                            <asp:ControlParameter ControlID="ddlNazwisko" Name="Autor" PropertyName="SelectedValue" Type="Int32" DefaultValue="2" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
                 </td>
-            </tr>
-            <tr>
-                <td class="auto-style5" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">Gatunek</td>
-                <td class="auto-style6" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">
-                    <asp:DropDownList ID="DropDownList4" runat="server" AutoPostBack="True">
-                    </asp:DropDownList>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style5" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">Data wydania</td>
-                <td class="auto-style6" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">
-                    <asp:DropDownList ID="DropDownList5" runat="server" AutoPostBack="True">
-                    </asp:DropDownList>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style5" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">Wydawnictwo</td>
-                <td class="auto-style6" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">
-                    <asp:DropDownList ID="DropDownList6" runat="server" AutoPostBack="True">
-                    </asp:DropDownList>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style5" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">Data rezerwacji</td>
-                <td class="auto-style6" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">
-                    <asp:DropDownList ID="DropDownList7" runat="server" AutoPostBack="True">
-                    </asp:DropDownList>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style2" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">Data rezerwacji</td>
-                <td class="auto-style2" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">
-                    <asp:Calendar ID="cWylot" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" Width="330px">
-                        <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
-                        <DayStyle BackColor="#CCCCCC" />
-                        <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="White" />
-                        <OtherMonthDayStyle ForeColor="#999999" />
-                        <SelectedDayStyle BackColor="#333399" ForeColor="White" />
-                        <TitleStyle BackColor="#333399" BorderStyle="Solid" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" />
-                        <TodayDayStyle BackColor="#999999" ForeColor="White" />
-                    </asp:Calendar>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style7" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">&nbsp;</td>
-                <td class="auto-style7" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">Liczba egzemplarzy</td>
-                <td class="auto-style2" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">
-                    <asp:ListBox ID="ListBox1" runat="server" Height="55px" Width="57px">
-                        <asp:ListItem>1</asp:ListItem>
-                        <asp:ListItem>2</asp:ListItem>
-                        <asp:ListItem>3</asp:ListItem>
-                    </asp:ListBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style4" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">&nbsp;</td>
-                <td class="auto-style4" style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">Uwagi</td>
-                <td style="border: thin groove #000000; background-color: #CCCCFF; font-family: Arial, Helvetica, sans-serif">
-                    <textarea id="taUwagi" runat="server" cols="20" name="S1" rows="1"></textarea></td>
-            </tr>
+        </tr>
+        <tr>
+            <td class="auto-style8">&nbsp;</td>
+            <td>
+                    &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style8">
+                <asp:Button ID="Button1" runat="server" BackColor="#FF6600" Font-Bold="True" Font-Italic="True" Font-Overline="False" Font-Size="Medium" Font-Strikeout="False" Font-Underline="True" ForeColor="White" OnClick="Button1_Click" Text="Do rezerwacji" />
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
         </table>
-    
-    </div>
-    </form>
-</body>
-</html>
+</asp:Content>
+
