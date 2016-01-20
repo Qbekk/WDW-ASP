@@ -36,7 +36,7 @@
                         <asp:SessionParameter Name="ID" SessionField="idrezer" Type="Int32" />
                     </SelectParameters>
                 </asp:SqlDataSource>
-                <asp:Button ID="ButtWyjsc" runat="server" OnClick="ButtWyjsc_Click" Text="Do bazy rezerwacji" />
+                <asp:Button ID="ButtWyjsc" runat="server" OnClick="ButtWyjsc_Click" Text="Do bazy rezerwacji" BackColor="#FF66CC" Font-Underline="False" />
             </td>
             <td>&nbsp;</td>
         </tr>

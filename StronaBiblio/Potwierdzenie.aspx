@@ -48,10 +48,10 @@
         </tr>
         <tr>
             <td class="auto-style4">
-                <asp:Button ID="BtnCofnij" runat="server" OnClick="BtnCofnij_Click" Text="Cofnij" Width="115px" />
+                <asp:Button ID="BtnCofnij" runat="server" OnClick="BtnCofnij_Click" Text="Cofnij" Width="115px" BackColor="#FF6600" Font-Italic="True" />
             </td>
             <td class="auto-style5">
-                <asp:Button ID="BtnDalej" runat="server" BackColor="#33CCFF" Text="Rezerwuj Książkę" OnClick="BtnDalej_Click" />
+                <asp:Button ID="BtnDalej" runat="server" BackColor="#33CCFF" Text="Rezerwuj Książkę" OnClick="BtnDalej_Click" Font-Underline="True" />
             </td>
         </tr>
     </table>

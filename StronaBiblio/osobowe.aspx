@@ -51,8 +51,8 @@
     </tr>
     <tr>
         <td class="auto-style4">
-            <asp:Button ID="ButtCofnij" runat="server" OnClick="ButtCofnij_Click" Text="Anuluj" />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Przejdź dalej" BackColor="#66CCFF" Font-Bold="True" Font-Overline="False" Font-Size="Medium" Font-Strikeout="False" />
+            <asp:Button ID="ButtCofnij" runat="server" OnClick="ButtCofnij_Click" Text="Anuluj" BackColor="#FF6600" Font-Italic="True" />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Przejdź dalej" BackColor="#66CCFF" Font-Bold="True" Font-Overline="False" Font-Size="Medium" Font-Strikeout="False" Font-Underline="True" />
         </td>
         <td>
             <asp:ValidationSummary ID="ValidationSummary1" runat="server" BorderStyle="Groove" DisplayMode="List" Font-Names="Verdana" Font-Size="Small" ForeColor="#CC0000" ShowMessageBox="True" />
